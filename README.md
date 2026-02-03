@@ -4,25 +4,22 @@
 A modern, cybersecurity-themed **portfolio & resource hub** built for **Kr Satyam**.  
 This project documents a journey into **offensive security, ethical hacking, and computer science**, wrapped in a sleek hacker aesthetic with interactive visuals like glitch text, Matrix rain, and neon UI elements.
 
-<p align="center">
-  <a href="https://kaizenbreach.vercel.app/">
-    <img src="https://img.shields.io/badge/Live-Demo-green?style=for-the-badge&logo=vercel" />
-  </a>
-  <a href="https://github.com/krsatyam1607/kaizenbreach">
-    <img src="https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github" />
-  </a>
-</p>
+---
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Stack-React%20%7C%20TypeScript%20%7C%20Vite%20%7C%20Tailwind-blue?style=flat-square" />
-</p>
+## 🚀 Live & Code
+
+[![Live Demo](https://img.shields.io/badge/STATUS-LIVE-00ff9c?style=for-the-badge)](https://kaizenbreach.vercel.app)
+[![Deploy](https://img.shields.io/badge/DEPLOY-VERCEL-black?style=for-the-badge&logo=vercel&logoColor=white)](https://kaizenbreach.vercel.app)
+[![GitHub Repo](https://img.shields.io/badge/CODE-GITHUB-black?style=for-the-badge&logo=github)](https://github.com/krsatyam1607/kaizenbreach)
+
+[![Stack](https://img.shields.io/badge/STACK-REACT%20%7C%20TYPESCRIPT%20%7C%20VITE%20%7C%20TAILWIND-blue?style=flat-square)](#)
 
 ---
 
 ## 🔗 Quick Links
 
 - **Live Deployment:** https://kaizenbreach.vercel.app  
-- **Source Code:** https://github.com/krsatyam1607/kaizenbreach
+- **Source Code:** https://github.com/krsatyam1607/kaizenbreach  
 
 ---
 
@@ -226,3 +223,4 @@ See the `LICENSE` file for details.
   Built with 💻 and ☕ by <strong>KaizenBreach</strong>
 </p>
 ```
+Just tell me 👊
