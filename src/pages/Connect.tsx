@@ -21,7 +21,7 @@ const socialLinks = [
   {
     name: "LinkedIn",
     description: "Connect for professional networking and opportunities",
-    url: "https://linkedin.com/in/kaizenbreach",
+    url: "https://linkedin.com/in/krsatyam07",
     icon: Linkedin,
     color: "hover:border-accent hover:text-accent hover:shadow-[0_0_30px_hsl(220_100%_50%_/_0.3)]",
     bgHover: "hover:bg-accent/10",
@@ -57,7 +57,7 @@ Looking forward to hearing from you.
 Best regards,
 [Your Name]`
     );
-    window.location.href = `mailto:contact@kaizenbreach.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:kaizenbreach@gmail.com?subject=${subject}&body=${body}`;
   };
 
   return (

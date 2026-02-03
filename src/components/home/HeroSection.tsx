@@ -1,81 +1,69 @@
 import { Link } from "react-router-dom";
-import { Download, Youtube, Users } from "lucide-react";
-import MatrixRain from "@/components/effects/MatrixRain";
-import GlitchText from "@/components/effects/GlitchText";
-import NeonButton from "@/components/ui/NeonButton";
+import { Download, Youtube, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Matrix Rain Background */}
-      <MatrixRain />
+    <section className="py-20 md:py-32 overflow-hidden relative">
+      {/* Subtle Background Gradient for depth */}
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-secondary/20 -z-10" />
 
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/80 to-background" />
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col-reverse md:flex-row items-center gap-12 md:gap-20">
+          
+          {/* Left Content */}
+          <div className="flex-1 space-y-8 text-center md:text-left animate-fade-in-up">
+            <div className="space-y-4">
+              <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-foreground">
+                Hi, I'm <span className="text-primary border-b-4 border-primary/20">Kr Satyam</span>
+              </h1>
+              <h2 className="text-2xl md:text-3xl text-muted-foreground font-medium font-mono">
+                3rd Year CSE Student
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-xl mx-auto md:mx-0 leading-relaxed">
+                I am a cybersecurity learner focusing on offensive security and ethical hacking. 
+                Documenting my journey through B.Tech and sharing resources for the community.
+              </p>
+            </div>
 
-      {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center">
-        <div className="max-w-4xl mx-auto space-y-8">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/5 text-primary font-mono text-sm animate-fade-in">
-            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            Offensive Security & Ethical Hacking
+            <div className="flex flex-wrap items-center justify-center md:justify-start gap-4">
+              <Link to="/notes">
+                <Button size="lg" className="gap-2 bg-primary text-primary-foreground hover:bg-primary/90">
+                  <Download className="h-4 w-4" />
+                  Get Notes
+                </Button>
+              </Link>
+              <a href="https://youtube.com/@KaizenBreach" target="_blank" rel="noreferrer">
+                <Button size="lg" variant="outline" className="gap-2 border-primary/20 hover:bg-secondary">
+                  <Youtube className="h-4 w-4" />
+                  YouTube
+                </Button>
+              </a>
+              <Link to="/about">
+                <Button size="lg" variant="ghost" className="gap-2 hover:bg-secondary">
+                  About Me <ArrowRight className="h-4 w-4" />
+                </Button>
+              </Link>
+            </div>
           </div>
 
-          {/* Main Heading */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-            <GlitchText
-              text="KaizenBreach"
-              className="text-primary text-glow-cyan"
-            />
-            <span className="block text-foreground mt-2">
-              Continuous Improvement in{" "}
-              <span className="text-secondary">Cyber Offense</span>
-            </span>
-          </h1>
-
-          {/* Subtext */}
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto font-mono animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-            Master the art of ethical hacking through structured learning,
-            hands-on practice, and continuous improvement.
-          </p>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-wrap items-center justify-center gap-4 pt-4 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-            <Link to="/notes">
-              <NeonButton variant="cyan" size="lg">
-                <Download className="mr-2 h-5 w-5" />
-                Download Notes
-              </NeonButton>
-            </Link>
-            <a
-              href="https://youtube.com/@KaizenBreach"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <NeonButton variant="purple" size="lg">
-                <Youtube className="mr-2 h-5 w-5" />
-                Watch on YouTube
-              </NeonButton>
-            </a>
-            <Link to="/connect">
-              <NeonButton variant="blue" size="lg">
-                <Users className="mr-2 h-5 w-5" />
-                Connect with Me
-              </NeonButton>
-            </Link>
+          {/* Right Image / Profile Photo */}
+          <div className="flex-1 flex justify-center md:justify-end animate-fade-in-up">
+            <div className="relative w-64 h-64 md:w-80 md:h-80 group">
+              {/* Photo */}
+              <img 
+                src="/profile.jpeg" 
+                alt="Kr Satyam" 
+                className="rounded-2xl object-cover w-full h-full border border-border shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]"
+              />
+              
+              {/* Subtle Dark Glow behind image */}
+              <div className="absolute -z-10 inset-0 bg-primary/10 blur-3xl rounded-full opacity-50" />
+            </div>
           </div>
 
-          {/* Terminal decoration */}
-          <div className="mt-16 font-mono text-sm text-muted-foreground animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
-            <span className="text-primary">$</span> sudo learn --hack --ethically
-            <span className="inline-block w-2 h-4 ml-1 bg-primary animate-pulse" />
-          </div>
         </div>
       </div>
-
-      {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
     </section>
   );
 };
