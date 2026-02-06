@@ -5,10 +5,10 @@
 </p>
 
 <p align="center">
-<img src="https://komarev.com/ghpvc/?username=krsatyam1607&repo=kaizenbreach&style=flat-square&color=38bdf8"/>
-<img src="https://img.shields.io/github/stars/krsatyam1607/kaizenbreach?style=flat-square"/>
-<img src="https://img.shields.io/github/forks/krsatyam1607/kaizenbreach?style=flat-square"/>
-<img src="https://img.shields.io/github/last-commit/krsatyam1607/kaizenbreach?style=flat-square"/>
+<img src="https://komarev.com/ghpvc/?username=krsatyam11&repo=kaizenbreach&style=flat-square&color=38bdf8"/>
+<img src="https://img.shields.io/github/stars/krsatyam11/kaizenbreach?style=flat-square"/>
+<img src="https://img.shields.io/github/forks/krsatyam11/kaizenbreach?style=flat-square"/>
+<img src="https://img.shields.io/github/last-commit/krsatyam11/kaizenbreach?style=flat-square"/>
 </p>
 
 ---
@@ -62,7 +62,7 @@ Built to stay **readable, fast, and distraction-free**.
 ## 📊 GitHub Activity Tracker
 
 <p align="center">
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=krsatyam1607&theme=tokyo-night&hide_border=true"/>
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=krsatyam11&theme=tokyo-night&hide_border=true"/>
 </p>
 
 Tracks **consistent effort**, not just output.
@@ -72,7 +72,7 @@ Tracks **consistent effort**, not just output.
 ## 🐍 Contribution Timeline
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/krsatyam1607/kaizenbreach/output/github-snake-dark.svg"/>
+<img src="https://raw.githubusercontent.com/krsatyam11/kaizenbreach/output/github-snake-dark.svg"/>
 </p>
 
 Every square represents **learning time**, not just commits.
