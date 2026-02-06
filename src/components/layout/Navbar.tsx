@@ -42,7 +42,7 @@ const Navbar = () => {
             ))}
             
             <a 
-              href="https://github.com/krsatyam1607" 
+              href="https://github.com/krsatyam11" 
               target="_blank" 
               rel="noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
@@ -59,7 +59,7 @@ const Navbar = () => {
 
           {/* Mobile Menu Toggle */}
           <div className="flex items-center gap-4 md:hidden">
-            <a href="https://github.com/krsatyam1607" target="_blank" rel="noreferrer">
+            <a href="https://github.com/krsatyam11" target="_blank" rel="noreferrer">
               <Github className="h-5 w-5 text-foreground" />
             </a>
             <Button
