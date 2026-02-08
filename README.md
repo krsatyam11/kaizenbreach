@@ -1,3 +1,6 @@
+Here is the updated `README.md` reflecting the addition of the **Blog**, **Tools**, and the **Hidden Terminal** features.
+
+```markdown
 <h1 align="center">🛡️ KaizenBreach</h1>
 
 <p align="center">
@@ -35,15 +38,20 @@ KaizenBreach is a **minimalist portfolio + learning hub** designed to document:
 - Personal progress tracking
 - Long-term skill roadmap
 
-### Current Sections
+### 📂 Sections
 
 - **Home** — Philosophy, identity, and focus areas  
-- **Notes** — Curated cybersecurity notes (Web, Network, OS, Tools)  
+- **Notes** — Curated cybersecurity notes (Web, Network, OS)  
+- **Tools** — Arsenal of custom scripts, payloads, and utilities  
+- **Blog** — Security logs, CTF writeups, and research (Markdown-based)  
 - **Learning** — What I’m studying right now (OSCP, Rust, internals)  
 - **About** — Background, intent, and long-term vision  
 - **Connect** — Socials & platforms
 
-Built to stay **readable, fast, and distraction-free**.
+### 🕵️‍♂️ Hidden Features
+- **Interactive Terminal** — A simulated bash environment hidden within the site.
+  - **Trigger:** Press `Ctrl + K` (or `Cmd + K` on Mac) anywhere on the site.
+  - **Commands:** `whoami`, `socials`, `tools`, `help`, `clear`.
 
 ---
 
@@ -55,6 +63,7 @@ Built to stay **readable, fast, and distraction-free**.
 <img src="https://img.shields.io/badge/TailwindCSS-38B2AC?logo=tailwind-css&logoColor=white"/>
 <img src="https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white"/>
 <img src="https://img.shields.io/badge/Bun-000000?logo=bun&logoColor=white"/>
+<img src="https://img.shields.io/badge/Markdown-000000?logo=markdown&logoColor=white"/>
 </p>
 
 ---
@@ -86,10 +95,10 @@ This project is **open to meaningful contributions**.
 ### What You Can Contribute
 
 - 🧠 Security notes (Web, Network, Linux, Tools)
+- 📝 Blog posts or CTF writeups (Markdown format)
 - 📄 Cheatsheets & PDFs
-- 🐞 Bug fixes / UI polish
 - ⚡ Performance or accessibility improvements
-- 🧩 New sections or features (minimal & purposeful)
+- 🧩 New terminal commands
 
 ### Contribution Rules
 
@@ -105,7 +114,7 @@ git fork
 git checkout -b feature/your-feature
 git commit -m "Add: meaningful improvement"
 git push origin feature/your-feature
-````
+```
 
 Then open a **Pull Request** with a clear description.
 
@@ -115,10 +124,12 @@ Then open a **Pull Request** with a clear description.
 
 Planned additions (when time permits):
 
+* [x] **Blog System** (Markdown rendering implementation)
+* [x] **Tools Section** (Portfolio for scripts)
+* [x] **Hidden Terminal** (Easter egg UI)
 * [ ] Advanced note tagging & filters
 * [ ] Red Team / Blue Team learning split
-* [ ] Writeups (CTFs, labs, experiments)
-* [ ] Offline-first notes
+* [ ] Offline-first notes (PWA enhancement)
 * [ ] Dark-first accessibility improvements
 
 No deadlines. Only consistency.
@@ -135,4 +146,4 @@ No material is intended to promote misuse or illegal activity.
 <p align="center">
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,100:38bdf8&height=120&section=footer"/>
 </p>
-
+```

@@ -8,10 +8,17 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
+
   plugins: [react()],
+
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
+  },
+
+  // 🔐 Security Hardening
+  build: {
+    sourcemap: false, // Do NOT ship source maps in production
   },
 }));
