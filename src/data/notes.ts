@@ -110,6 +110,18 @@ export const notesData: Note[] = [
     downloadUrl: "#",
     icon: "Scan",
   },
+
+  // ✅ NEW HELP DESK NOTE FILE
+  {
+    id: "11",
+    title: "Practical Helpdesk - Intro to IT",
+    description: "Beginner-friendly introduction to IT support, troubleshooting, and helpdesk fundamentals.",
+    category: "Networking",
+    difficulty: "Beginner",
+    tags: ["Helpdesk", "IT", "Support", "Beginner"],
+    downloadUrl: "/notes/practical-helpdesk-intro-to-it.pdf",
+    icon: "BookOpen",
+  },
 ];
 
 export const categories = [

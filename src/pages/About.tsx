@@ -21,7 +21,7 @@ const About = () => {
               <p className="text-muted-foreground">
                 Starting as a fresher, I realized the importance of structured learning. 
                 I created this platform to document what I learn and share it with others 
-                who are just starting out. I believe in the philosophy of "Kaizen" — continuous improvement.
+                who are just starting out. I believe in the philosophy of "Kaizen" - continuous improvement.
               </p>
             </div>
             
