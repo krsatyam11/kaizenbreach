@@ -17,7 +17,7 @@ export const currentLearningData: LearningItem[] = [
     description:
       "Completed the Intro to IT section, covering IT fundamentals, IT department roles, help desk responsibilities, and real-world job expectations.",
     category: "IT Fundamentals",
-    progress: 28,
+    progress: 39,
     status: "Just Started",
     resourceLink: "https://academy.tcm-sec.com/"
   }
