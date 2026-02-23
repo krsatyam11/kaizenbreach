@@ -70,7 +70,7 @@
     "@types/react-dom": "^18.2.22",
     "@vitejs/plugin-react-swc": "^3.5.0",
     "autoprefixer": "^10.4.19",
-    "eslint": "^10.0.2",
+    "eslint": "^8.57.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
     "globals": "^15.0.0",
@@ -81,7 +81,3 @@
     "vite": "^7.3.1"
   }
 }
-
-
-
-  
