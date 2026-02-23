@@ -15,9 +15,9 @@ import BlogPost from "./pages/BlogPost";
 import About from "./pages/About";
 import Connect from "./pages/Connect";
 import Resume from "./pages/Resume";
+import Certifications from "./pages/Certifications"; // Import New Page
 import NotFound from "./pages/NotFound";
 
-// Lazy loaded hidden terminal (performance + stealth)
 const HiddenTerminal = React.lazy(() =>
   import("./components/effects/HiddenTerminal")
 );
@@ -27,8 +27,10 @@ const queryClient = new QueryClient();
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      {/* 🔐 Security Headers */}
       <Helmet>
+        <meta charSet="utf-8" />
+        <title>Kr Satyam | Cybersecurity Learner</title>
+        <meta name="description" content="Portfolio of a 3rd Year CSE Student exploring Cybersecurity." />
         <meta
           httpEquiv="Content-Security-Policy"
           content="
@@ -45,7 +47,6 @@ const App = () => (
       <Toaster />
       <Sonner />
 
-      {/* 👾 Hidden Terminal Easter Egg */}
       <Suspense fallback={null}>
         <HiddenTerminal />
       </Suspense>
@@ -57,11 +58,10 @@ const App = () => (
           <Route path="/tools" element={<Tools />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/certifications" element={<Certifications />} /> {/* Add Route */}
           <Route path="/about" element={<About />} />
           <Route path="/connect" element={<Connect />} />
           <Route path="/resume" element={<Resume />} />
-
-          {/* Catch-all */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

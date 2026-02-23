@@ -1,7 +1,8 @@
 import { useParams, Navigate } from "react-router-dom";
 import Markdown from "react-markdown";
 import Layout from "@/components/layout/Layout";
-import { blogsData } from "@/data/blogs";
+import SEO from "@/components/seo/SEO";
+import { blogsData } from "@/data/blogs"; // Updated path
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Calendar } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -14,6 +15,11 @@ const BlogPost = () => {
 
   return (
     <Layout>
+      <SEO 
+        title={post.title} 
+        description={post.description} 
+        type="article"
+      />
       <div className="container mx-auto px-4 py-12 max-w-3xl">
         <Link to="/blog">
           <Button variant="ghost" className="pl-0 gap-2 mb-8 hover:bg-transparent hover:text-primary">
@@ -23,6 +29,11 @@ const BlogPost = () => {
         
         <article className="prose prose-invert prose-green max-w-none">
           <div className="mb-8 border-b border-border pb-8">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="text-xs bg-primary/10 text-primary border border-primary/20 px-2 py-1 rounded">
+                {post.category}
+              </span>
+            </div>
             <h1 className="text-3xl md:text-4xl font-bold mb-4">{post.title}</h1>
             <div className="flex items-center gap-2 text-sm text-muted-foreground font-mono">
               <Calendar className="h-4 w-4" />
@@ -30,7 +41,6 @@ const BlogPost = () => {
             </div>
           </div>
           
-          {/* Markdown Rendering with Custom Styling for Cybersecurity Feel */}
           <Markdown
             components={{
               code(props) {

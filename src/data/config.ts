@@ -22,11 +22,13 @@ export const navLinks = [
   { name: "Notes", href: "/notes" },
   { name: "Tools", href: "/tools" },
   { name: "Blog", href: "/blog" },
+  { name: "Certifications", href: "/certifications" }, // Added
   { name: "About", href: "/about" },
   { name: "Connect", href: "/connect" },
 ];
 
 export const socialLinksData = [
+  // ... (keep existing)
   {
     name: "YouTube",
     description: "Watch tutorials, CTF walkthroughs, and security content",
@@ -62,7 +64,8 @@ export const socialLinksData = [
 ];
 
 export const featuresData = [
-  {
+  // ... (keep existing)
+    {
     icon: FileText,
     title: "Cybersecurity Notes",
     description: "Comprehensive notes on web security, networking, Linux, and more.",
