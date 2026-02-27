@@ -7,7 +7,6 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { notesData, categories } from "@/data/notes";
 
-// Map string icon names from data to actual Lucide components
 const IconMap: Record<string, any> = {
   Database, Code, Terminal, Network, Shield, Search: Scan, Key, RefreshCw, Cpu, Scan, FileText
 };
@@ -31,23 +30,23 @@ const Notes = () => {
     <Layout>
       <div className="container mx-auto px-4 py-12">
         <div className="mb-12 space-y-4 text-center md:text-left">
-          <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground">
-            Cybersecurity <span className="text-primary">Notes</span>
+          <h1 className="text-3xl md:text-4xl font-bold tracking-tight font-mono">
+            ~/Cybersecurity/<span className="text-primary">Notes</span>
           </h1>
-          <p className="text-muted-foreground max-w-2xl font-mono text-sm">
+          <p className="text-muted-foreground max-w-2xl font-mono text-sm border-l-2 border-primary/50 pl-4">
             // Categorized study materials, cheat sheets, and offensive security references.
           </p>
         </div>
 
         {/* Filters Section */}
-        <div className="flex flex-col gap-6 mb-8 p-4 bg-secondary/10 rounded-lg border border-border/50">
+        <div className="flex flex-col gap-6 mb-8 p-6 bg-black/40 backdrop-blur-md rounded-xl border border-white/5">
           {/* Search Bar */}
           <div className="relative w-full md:max-w-md">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             <Input
-              placeholder="Search notes (e.g., SQL Injection, Linux)..."
-              maxLength={50} // Security: Limit input length
-              className="pl-9 bg-background border-border focus:ring-primary/50"
+              placeholder="Search notes..."
+              maxLength={50}
+              className="pl-9 bg-secondary/20 border-white/10 focus:border-primary/50 font-mono text-sm"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
@@ -61,10 +60,10 @@ const Notes = () => {
                 variant={selectedCategory === cat ? "default" : "outline"}
                 size="sm"
                 onClick={() => setSelectedCategory(cat)}
-                className={`text-xs md:text-sm transition-all ${
+                className={`text-xs md:text-sm font-mono transition-all ${
                   selectedCategory === cat 
-                    ? "bg-primary text-primary-foreground shadow-[0_0_10px_hsl(185_100%_50%_/_0.3)]" 
-                    : "hover:border-primary/50"
+                    ? "bg-primary text-primary-foreground" 
+                    : "bg-transparent border-white/10 hover:border-primary/50 hover:bg-secondary/30"
                 }`}
               >
                 {cat}
@@ -73,44 +72,47 @@ const Notes = () => {
           </div>
         </div>
 
-        {/* Results Grid */}
+        {/* Results Grid - Glassmorphism Cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredNotes.length > 0 ? (
             filteredNotes.map((note) => {
               const IconComponent = IconMap[note.icon] || FileText;
               
               return (
-                <Card key={note.id} className="bg-card/50 border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 flex flex-col">
-                  <CardHeader>
-                    <div className="flex justify-between items-start mb-3">
-                      <div className="p-2 bg-secondary/30 rounded-md">
+                <Card key={note.id} className="group bg-black/40 backdrop-blur-md border-white/10 hover:border-primary/50 transition-all duration-300 flex flex-col overflow-hidden">
+                  <CardHeader className="relative">
+                    {/* Subtle gradient background on hover */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    
+                    <div className="relative z-10 flex justify-between items-start mb-3">
+                      <div className="p-2 bg-white/5 border border-white/10 rounded-md group-hover:border-primary/30 transition-colors">
                         <IconComponent className="h-5 w-5 text-primary" />
                       </div>
                       <Badge variant="outline" className={`
-                        border-border font-mono text-[10px] uppercase
-                        ${note.difficulty === 'Advanced' ? 'text-destructive' : 
-                          note.difficulty === 'Intermediate' ? 'text-yellow-500' : 'text-green-500'}
+                        border-white/10 bg-black/50 font-mono text-[10px] uppercase tracking-wider
+                        ${note.difficulty === 'Advanced' ? 'text-red-400' : 
+                          note.difficulty === 'Intermediate' ? 'text-yellow-400' : 'text-green-400'}
                       `}>
                         {note.difficulty}
                       </Badge>
                     </div>
-                    <CardTitle className="text-xl text-foreground leading-tight">{note.title}</CardTitle>
-                    <CardDescription className="line-clamp-2 text-muted-foreground mt-2">
+                    <CardTitle className="relative z-10 text-xl font-mono leading-tight group-hover:text-primary transition-colors">{note.title}</CardTitle>
+                    <CardDescription className="relative z-10 line-clamp-2 text-muted-foreground mt-2 text-sm">
                       {note.description}
                     </CardDescription>
                   </CardHeader>
-                  <CardContent className="mt-auto pt-0">
+                  <CardContent className="mt-auto pt-0 relative z-10">
                     <div className="flex flex-wrap gap-2 mb-6">
                       {note.tags.slice(0, 3).map(tag => (
-                        <span key={tag} className="text-[10px] text-muted-foreground bg-secondary/50 border border-border px-2 py-0.5 rounded-full">
+                        <span key={tag} className="text-[10px] font-mono text-muted-foreground bg-white/5 border border-white/5 px-2 py-0.5 rounded-sm">
                           #{tag}
                         </span>
                       ))}
                     </div>
-                    <Button className="w-full gap-2 group border-primary/20 hover:bg-primary hover:text-primary-foreground" variant="outline" asChild>
+                    <Button className="w-full gap-2 font-mono text-xs border-white/10 hover:bg-primary hover:text-primary-foreground hover:border-primary" variant="outline" asChild>
                       <a href={note.downloadUrl}>
-                        <Download className="h-4 w-4 transition-transform group-hover:translate-y-1" /> 
-                        Download PDF
+                        <Download className="h-3 w-3" /> 
+                        DOWNLOAD_PDF
                       </a>
                     </Button>
                   </CardContent>
@@ -118,10 +120,10 @@ const Notes = () => {
               );
             })
           ) : (
-            <div className="col-span-full text-center py-20 text-muted-foreground">
-              <p>No notes found matching your criteria.</p>
-              <Button variant="link" onClick={() => {setSearchQuery(""); setSelectedCategory("All")}} className="mt-2 text-primary">
-                Clear Filters
+            <div className="col-span-full text-center py-20 text-muted-foreground font-mono">
+              <p>Error 404: No notes found matching criteria.</p>
+              <Button variant="link" onClick={() => {setSearchQuery(""); setSelectedCategory("All")}} className="mt-2 text-primary font-mono">
+                [ Clear Filters ]
               </Button>
             </div>
           )}

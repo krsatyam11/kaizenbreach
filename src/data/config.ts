@@ -87,7 +87,7 @@ export const featuresData = [
     description: "Learn about the philosophy behind continuous improvement in security.",
     link: "/about",
     external: false,
-    color: "text-secondary",
+    color: "text-primary",
   },
   {
     icon: Download,
@@ -95,6 +95,6 @@ export const featuresData = [
     description: "Download my professional resume for collaborations and opportunities.",
     link: "/resume",
     external: false,
-    color: "text-accent",
+    color: "text-ring",
   },
 ];
